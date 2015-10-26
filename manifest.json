@@ -1,0 +1,22 @@
+{
+  "name": "Serial Monitor",
+  "description": "Serial Monitor web application ",
+  "version": "2.0",
+  "manifest_version": 2,
+  "minimum_chrome_version": "23",
+  
+
+  "app": {
+    "background": {
+      "scripts": [ "js/background.js" ]
+    }
+  },
+
+  "icons": {
+    "128": "img/icon.png"
+  },
+
+  "permissions": [
+    "serial"
+  ]
+}

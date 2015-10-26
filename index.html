@@ -1,0 +1,78 @@
+<!--
+ * Serial_Monitor application.
+ * Copyright (C) 2013  Damiano Lollini
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SERIAL MONITOR</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/app.css"></link>
+  </head>
+  <body> 
+  	<span class="title">
+    SERIAL MONITOR 
+    </span>
+    v2.0
+    <br>
+    App by Damiano Lollini
+    <br>
+    <button type="button" class="general" id="bt_connect">CONNECT</button>
+    <button type="button" class="general" id="bt_disconnect">DISCONNECT</button>
+    <button type="button" class="general" id="bt_updatePorts">UPDATE PORTS</button>    
+    <br>
+    <select class="general" id="port-picker"></select>
+    <img style="width: 157px; height: 183px;" id="img_robot" src="img/robot_anim.gif">
+    Status:&nbsp;
+    <span id="status">Loading</span>
+    <br>
+    <br>
+    Output: <br>
+    <input size="40" id="campo_tx" type="text">
+    <button type="button" class="general" id="bt_invia">SEND</button> 
+    <br>
+    Input: <br>
+    <textarea id="campo_rx" readonly="readonly" rows="30" cols="70"> </textarea>
+    <br>
+    <div id="div_option">
+    <input checked="checked" id="cb_scroll" type="checkbox"> 
+    Auto Scroll 
+    <button type="button" class="general" id="bt_clear">Clear Text</button>
+    <select size="1" class="general" id="sl_special">
+      <option selected="selected" value="0">Nessun fine riga</option>
+      <option value="10">A capo (NL)</option>
+      <option value="13">Ritorno carrello (CR)</option>
+      <option value="0">Sia NL sia CR</option>
+    </select>
+    <select size="1" class="general" id="sl_baudrate">
+      <option>300 baud</option>
+      <option>1200 baud</option>
+      <option>2400 baud</option>
+      <option>4800 baud</option>
+      <option selected="selected">9600 baud</option>
+      <option>14400 baud</option>
+      <option>19200 baud</option>
+      <option>28800 baud</option>
+      <option>38400 baud</option>
+      <option>57600 baud</option>
+      <option>115200 baud</option>
+    </select>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
